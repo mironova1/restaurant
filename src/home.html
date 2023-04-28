@@ -1,12 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-	@@include('html/_head.htm',{
-	"title":"HomePage"
-	})
+	@@include('html/_head.htm',{ "title":"HomePage" })
 	<body>
 		<div class="wrapper">
 			@@include('html/_header.htm',{})
 			<main class="page">
+				<section class="page-main main-page">
+					<div class="main-page__container">
+						<div class="main-page-slider__wrapper">
+							<!-- Оболонка слайдера -->
+							<div class="main-page__slider swiper">
+								<!-- Частина слайдера, що рухається -->
+								<div class="main-page__wrapper swiper-wrapper">
+									<!-- Слайд 1 -->
+									<div class="main-page__slide swiper-slide main-page-slide">
+										<div class="main-page-slide__wrapper">
+											<div class="main-page-slide__image-ibg">
+												<img src="@img/main/image-1.png" alt="picture" />
+											</div>
+											<div class="main-page-slide__desc desc-slide">
+												<div class="desc-slide__wrapper">
+													<div class="desc-slide__title">корпоративи</div>
+													<div class="desc-slide__text">
+														Відзначайте найкращі свята у кращому місці Дніпра!
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- Слайд 2-->
+									<div class="main-page__slide swiper-slide main-page-slide">
+										<div class="main-page-slide__wrapper">
+											<div class="main-page-slide__image-ibg">
+												<img src="@img/main/image-2.png" alt="picture" />
+											</div>
+											<div class="main-page-slide__desc desc-slide">
+												<div class="desc-slide__wrapper">
+													<div class="desc-slide__title">весілля</div>
+													<div class="desc-slide__text">
+														Відзначайте найкращі свята у кращому місці Дніпра!
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- Слайд 3 -->
+									<div class="main-page__slide swiper-slide main-page-slide">
+										<div class="main-page-slide__wrapper">
+											<div class="main-page-slide__image-ibg">
+												<img src="@img/main/image-3.png" alt="picture" />
+											</div>
+											<div class="main-page-slide__desc desc-slide">
+												<div class="desc-slide__wrapper">
+													<div class="desc-slide__title">звані вечори</div>
+													<div class="desc-slide__text">
+														Відзначайте найкращі свята у кращому місці Дніпра!
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- Слайд 4 -->
+									<div class="main-page__slide swiper-slide main-page-slide">
+										<div class="main-page-slide__wrapper">
+											<div class="main-page-slide__image-ibg">
+												<img src="@img/main/image-3.png" alt="picture" />
+											</div>
+											<div class="main-page-slide__desc desc-slide">
+												<div class="desc-slide__wrapper">
+													<div class="desc-slide__title">звані вечори</div>
+													<div class="desc-slide__text">
+														Відзначайте найкращі свята у кращому місці Дніпра!
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- Якщо потрібна пагінація -->
+							<div class="main-page__pagination swiper-pagination"></div>
+							<!-- Якщо потрібна навігація (ліворуч/праворуч) -->
+							<button type="button" class="main-page__button--prev swiper-button-prev"></button>
+							<button type="button" class="main-page__button--next swiper-button-next"></button>
+						</div>
+					</div>
+				</section>
 			</main>
 			@@include('html/_footer.htm',{})
 		</div>

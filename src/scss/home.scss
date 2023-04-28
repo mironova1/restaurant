@@ -1,3 +1,116 @@
 //====================================================================================================
 
+.page-main {
+}
+
+.main-page {
+	@include adaptiveValue('padding-top', 150, 50, 0, 1110, 768);
+	@include adaptiveValue('padding-bottom', 150, 50, 0, 1100, 768);
+	&__container {
+		max-width: rem(1600);
+	}
+
+	&__slider {
+	}
+
+	&__wrapper {
+	}
+
+	&__slide {
+	}
+
+	&__navigation {
+	}
+	&__button--prev {
+		&.swiper-button-prev {
+			left: calc(50% - 130px);
+			top: 107%;
+			&::after {
+				color: #000000;
+				font-size: rem(20);
+				font-weight: 900;
+			}
+		}
+	}
+
+	&__button--next {
+		&.swiper-button-next {
+			right: calc(50% - 130px);
+			top: 107%;
+			&::after {
+				color: #000000;
+				font-size: rem(20);
+				font-weight: 900;
+			}
+		}
+	}
+	&__pagination {
+		bottom: -7% !important;
+		& .swiper-pagination-bullet {
+			// @include adaptiveValue('bottom', -100, 0, 0, 1800, 1200);
+			cursor: default !important;
+			margin: 0 !important;
+			border-radius: 0;
+			width: rem(20);
+			height: rem(2.5);
+			// border: 1px solid #000000;
+			&.swiper-pagination-bullet-active {
+				background-color: #000000;
+			}
+		}
+	}
+}
+.main-page-slider {
+	&__wrapper {
+		position: relative;
+	}
+}
+.main-page-slide {
+	&__wrapper {
+		position: relative;
+	}
+	&__image-ibg {
+		padding-bottom: 111%;
+	}
+	&__desc {
+	}
+}
+.desc-slide {
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background: rgba(209, 169, 84, 0.9);
+	padding: rem(15);
+	text-align: center;
+	&__wrapper {
+		border: rem(1) solid rgba(255, 255, 255, 0.5);
+		padding: rem(15);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		@include adaptiveValue('row-gap', 25, 15, 0, 1800, 1100);
+	}
+	&__title {
+		@include adaptiveValue('font-size', 30, 20, 0, 1800, 991);
+		line-height: math.div(37, 30);
+		text-transform: uppercase;
+		color: #ffffff;
+	}
+
+	&__text {
+		font-size: 14px;
+		line-height: 1.35;
+		color: #ffffff;
+		max-width: rem(250);
+	}
+}
+.swiper-pagination {
+}
+.swiper-button-prev {
+}
+.swiper-button-next {
+}
+
 //====================================================================================================

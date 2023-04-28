@@ -3,10 +3,29 @@
 
 .button {
 	display: inline-flex;
-	padding: 0px 0px;
+	justify-content: center;
+	@include adaptiveValue('padding-top', 15, 10, 0, 1110, 991);
+	@include adaptiveValue('padding-bottom', 15, 10, 0, 1110, 991);
+	@include adaptiveValue('padding-left', 20, 15, 0, 1110, 991);
+	@include adaptiveValue('padding-right', 20, 15, 0, 1110, 991);
+	font-weight: 500;
+	@include adaptiveValue('font-size', 16, 12, 0, 1110, 991);
+	line-height: 1.35;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+	background: #d1a954;
+	color: #ffffff;
+	transition: all 0.3s ease 0s;
+	min-width: rem(150);
+	white-space: nowrap;
 	@media (any-hover: hover) {
 		&:hover {
+			background: #d6a02a;
+			box-shadow: 4px 4px 20px rgba(209, 169, 84, 1);
 		}
+	}
+	@media (max-width: $mobile) {
+		font-size: rem(20);
 	}
 	&._fw {
 		width: 100%;
