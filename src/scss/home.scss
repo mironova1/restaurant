@@ -111,7 +111,7 @@
 // ! page about restaurant
 .about-restaurant {
 	// @include adaptiveValue('padding-top', 500, 300, 1110, 768);
-	@include adaptiveValue('padding-bottom', 90, 60, 0, 1110, 991);
+	@include adaptiveValue('padding-bottom', 120, 60, 0, 1110, 991);
 	position: relative;
 	&__background {
 		@media (min-width: $mobileSmall) {
@@ -121,7 +121,7 @@
 				top: 0;
 				left: 0;
 				width: 100%;
-				min-height: 70%;
+				height: 65%;
 				background: #f9f7f7;
 				transform: translateY(50%);
 				z-index: -1;
@@ -151,7 +151,7 @@
 	}
 	&__title {
 		font-weight: 300;
-		@include adaptiveValue('font-size', 36, 30, 0, 1110, 992);
+		@include adaptiveValue('font-size', 36, 25, 0, 1110, 992);
 		line-height: 1.45;
 		letter-spacing: 0.05em;
 		text-transform: uppercase;
@@ -234,10 +234,6 @@
 		}
 	}
 	&__decor {
-		// display: none;
-		// @media (min-width: $tablet) {
-		// 	display: block;
-		// }
 		transform: rotate(336deg);
 		img {
 			@media (max-width: $tablet) {
@@ -275,4 +271,116 @@
 }
 
 //====================================================================================================
+// ! gallery
+.gallery {
+	@include adaptiveValue('padding-top', 120, 70, 0, 1110, 768);
+	@include adaptiveValue('padding-bottom', 150, 70, 0, 1110, 768);
+	&__container {
+	}
+
+	&__grid {
+	}
+}
+.grid-gallery {
+	display: grid;
+	grid-template-columns: repeat(12, minmax(0, 1fr));
+	grid-template-rows: repeat(12, minmax(0, 1fr));
+	@include adaptiveValue('gap', 30, 10, 0, 768, 500);
+	@media (max-width: $mobile) {
+		grid-template-columns: repeat(12, 1fr);
+		grid-template-rows: auto;
+	}
+
+	a {
+		img {
+			max-width: 100%;
+		}
+	}
+	&__reserve {
+		display: none;
+		@media (max-width: em(600)) {
+			display: inline-block;
+		}
+	}
+	&__element {
+		&--1 {
+			grid-row: span 4 / span 3;
+			grid-column: span 3;
+		}
+		&--2 {
+			grid-row: span 4;
+			grid-column: 4 / span 5;
+		}
+		&--3 {
+			grid-row: span 4;
+			grid-column: 9 / span 4;
+		}
+		&--4 {
+			grid-row: span 8;
+			grid-column: 1 / span 7;
+		}
+		&--5 {
+			grid-row: span 4;
+			grid-column: 8 / span 5;
+		}
+		&--6 {
+			grid-row: span 4;
+			grid-column: 8 / span 5;
+		}
+		@media (max-width: em(600)) {
+			&--1 {
+				grid-row: span 4;
+				grid-column: span 6;
+			}
+			&--2 {
+				grid-row: span 4;
+				grid-column: span 6;
+			}
+			&--3 {
+				grid-row: span 4;
+				grid-column: span 6;
+			}
+			&--4 {
+				grid-row: span 8;
+				grid-column: span 12;
+			}
+			&--5 {
+				grid-row: span 4;
+				grid-column: span 6;
+			}
+			&--6 {
+				grid-row: span 4;
+				grid-column: span 6;
+			}
+		}
+	}
+	&__headline {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		@include adaptiveValue('row-gap', 25, 10, 0, 479, 340);
+		h2 {
+			font-weight: 300;
+			@include adaptiveValue('font-size', 24, 16, 0, 1110, 768);
+			line-height: 1.35;
+			text-transform: uppercase;
+		}
+		img {
+			width: rem(50);
+			height: rem(50);
+			@media (min-width: em(550)) {
+				width: rem(80);
+				height: rem(80);
+			}
+		}
+	}
+
+	&__image {
+	}
+
+	&__preview {
+	}
+}
+
 //====================================================================================================
