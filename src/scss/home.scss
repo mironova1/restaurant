@@ -5,7 +5,7 @@
 
 .main-page {
 	@include adaptiveValue('padding-top', 150, 50, 0, 1110, 768);
-	@include adaptiveValue('padding-bottom', 150, 50, 0, 1100, 768);
+	@include adaptiveValue('padding-bottom', 250, 100, 0, 1100, 768);
 	&__container {
 		max-width: rem(1600);
 	}
@@ -106,11 +106,173 @@
 		max-width: rem(250);
 	}
 }
-.swiper-pagination {
+
+//====================================================================================================
+// ! page about restaurant
+.about-restaurant {
+	// @include adaptiveValue('padding-top', 500, 300, 1110, 768);
+	@include adaptiveValue('padding-bottom', 90, 60, 0, 1110, 991);
+	position: relative;
+	&__background {
+		@media (min-width: $mobileSmall) {
+			&::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				min-height: 70%;
+				background: #f9f7f7;
+				transform: translateY(50%);
+				z-index: -1;
+			}
+		}
+	}
+	&__container {
+		// transform: translateY(-35%);
+		display: flex;
+		flex-direction: column;
+		@include adaptiveValue('row-gap', 80, 60, 0, 1110, 991);
+	}
+
+	&__body {
+		// display: flex;
+		// flex-direction: column;
+		// align-items: center;
+	}
+	&__headline {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		row-gap: rem(16);
+		&:not(:last-child) {
+			@include adaptiveValue('margin-bottom', 48, 36, 0, 992, 768);
+		}
+	}
+	&__title {
+		font-weight: 300;
+		@include adaptiveValue('font-size', 36, 30, 0, 1110, 992);
+		line-height: 1.45;
+		letter-spacing: 0.05em;
+		text-transform: uppercase;
+		color: #222222;
+	}
+
+	&__logo {
+		img {
+			width: rem(80);
+			height: rem(80);
+		}
+	}
+	&__video-wrapper {
+		@media (min-width: $pc) {
+			display: flex;
+			justify-content: center;
+		}
+	}
+	&__video {
+		@extend %responsiveVideo;
+		border: rem(10) solid #ffffff;
+		filter: drop-shadow(rem(0) rem(0) rem(30) rgba(126, 126, 126, 0.5));
+	}
 }
-.swiper-button-prev {
+.video-restaurant {
+	// display: grid;
+	// justify-content: center;
+	&__item {
+	}
 }
-.swiper-button-next {
+.about-restaurant {
+	&__desc {
+	}
 }
 
+.desc-restaurant {
+	display: grid;
+	justify-content: space-between;
+	// display: grid;
+	@media (min-width: $mobile) {
+		grid-template-columns: minmax(rem(250), rem(350)) auto;
+	}
+	row-gap: rem(40);
+	column-gap: rem(40);
+
+	&__advantages {
+	}
+}
+.advantages {
+	display: flex;
+	flex-direction: column;
+	// row-gap: rem(20);
+	@include adaptiveValue('row-gap', 20, 12, 0, 767, 600);
+	&__body {
+		display: grid;
+		@media (min-width: $mobile) {
+			grid-template-columns: minmax(rem(180), rem(255)) minmax(rem(180), rem(255));
+		}
+
+		@include adaptiveValue('column-gap', 50, 20, 0, 1110, 768);
+		@include adaptiveValue('row-gap', 40, 30, 0, 1110, 768);
+		// row-gap: rem(40);
+	}
+	&__logo {
+		display: none;
+		@media (min-width: $mobileSmall) {
+			display: inline-block;
+			img {
+				width: rem(80);
+				height: rem(80);
+			}
+		}
+	}
+	&__image {
+		display: none;
+		@media (min-width: $mobile) {
+			display: flex;
+			align-items: center;
+			column-gap: rem(20);
+		}
+	}
+	&__decor {
+		// display: none;
+		// @media (min-width: $tablet) {
+		// 	display: block;
+		// }
+		transform: rotate(336deg);
+		img {
+			@media (max-width: $tablet) {
+				max-width: 60%;
+			}
+		}
+	}
+	&__picture {
+		display: flex;
+		align-items: center;
+		column-gap: rem(20);
+		// img
+	}
+	&__texts {
+		display: flex;
+		flex-direction: column;
+		row-gap: rem(16);
+	}
+
+	&__text {
+		font-weight: 300;
+		font-size: rem(14);
+		line-height: 1.35;
+		color: #616161;
+	}
+
+	&__sub-title {
+		font-weight: 300;
+		font-size: rem(16);
+		line-height: 1.35;
+		letter-spacing: 0.05em;
+		text-transform: uppercase;
+		color: #000000;
+	}
+}
+
+//====================================================================================================
 //====================================================================================================
