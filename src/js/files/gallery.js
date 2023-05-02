@@ -1,4 +1,3 @@
-
 /*
 Документація по роботі у шаблоні: https://www.lightgalleryjs.com/docs/
 Документація плагіна: https://www.lightgalleryjs.com/docs/
@@ -6,9 +5,9 @@
 */
 
 // Підключення функціоналу "Чертоги Фрілансера"
-import { isMobile, FLS } from "./functions.js";
+import {isMobile, FLS} from './functions.js';
 // Підключення списку активних модулів
-import { flsModules } from "./modules.js";
+import {flsModules} from './modules.js';
 
 // Підключення базового набору функціоналу
 import lightGallery from 'lightgallery';
@@ -28,7 +27,7 @@ import '@scss/libs/gallery/lightgallery.scss';
 // import '@scss/libs/gallery/lg-pager.scss';
 // import '@scss/libs/gallery/lg-fullscreen.scss';
 // import '@scss/libs/gallery/lg-share.scss';
-// import '@scss/libs/gallery/lg-comments.scss';s
+// import '@scss/libs/gallery/lg-comments.scss';
 // import '@scss/libs/gallery/lg-rotate.scss';
 // import '@scss/libs/gallery/lg-medium-zoom.scss';
 // import '@scss/libs/gallery/lg-relative-caption.scss';
@@ -40,21 +39,16 @@ import '@scss/libs/gallery/lightgallery.scss';
 const galleries = document.querySelectorAll('[data-gallery]');
 if (galleries.length) {
 	let galleyItems = [];
-	galleries.forEach(gallery => {
+	galleries.forEach((gallery) => {
 		galleyItems.push({
 			gallery,
 			galleryClass: lightGallery(gallery, {
 				// plugins: [lgZoom, lgThumbnail],
 				licenseKey: '7EC452A9-0CFD441C-BD984C7C-17C8456E',
 				speed: 500,
-			})
-		})
+			}),
+		});
 	});
 	// Додаємо в об'єкт модулів
 	flsModules.gallery = galleyItems;
 }
-
-
-
-
-
