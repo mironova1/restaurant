@@ -501,7 +501,7 @@
 	&__location {
 	}
 }
-.location-rastaurant {
+.location-restaurant {
 	display: flex;
 	flex-direction: column;
 	@include adaptiveValue('row-gap', 30, 20, 0, 1110, 768);
@@ -514,32 +514,11 @@
 	}
 
 	&__body {
-		display: flex;
-		flex-direction: column;
 		@include adaptiveValue('row-gap', 25, 15, 0, 768, 500);
 		& > :nth-child(n) {
-			display: flex;
-			align-items: center;
 			column-gap: rem(30);
-			svg {
-				width: rem(30);
-				max-height: rem(30);
-				fill: #d1a954;
-			}
-			a {
-				transition: border-bottom 0.3s ease 0s;
-				border-bottom: rem(1) solid transparent;
-			}
-			@media (any-hover: hover) {
-				&:hover {
-					a {
-						border-bottom: rem(1) solid #000000;
-					}
-				}
-			}
 		}
 	}
-
 	&__location {
 	}
 
@@ -643,7 +622,7 @@
 		display: inline-flex;
 		align-items: center;
 		justify-content: center;
-		background: rgba(37, 7, 54, 0.8);
+		background: rgba(46, 9, 71, 0.9);
 		border: rem(2) solid rgba(209, 169, 84, 0.9);
 		border-radius: rem(10);
 		@media (any-hover: hover) {

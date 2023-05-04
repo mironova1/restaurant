@@ -1,3 +1,143 @@
 //====================================================================================================
+.footer {
+	background: #f9f7f7;
+	@include adaptiveValue('padding-top', 100, 50, 0, 1110, 768);
+	@include adaptiveValue('padding-bottom', 100, 160, 4, 1110, 768);
+
+	&__container {
+		display: grid;
+		@media (min-width: $tablet) {
+			grid-template-columns: rem(80) 1fr;
+			@include adaptiveValue('column-gap', 150, 20, 0, 1110, 768);
+		}
+		@media (max-width: $tablet) {
+			row-gap: rem(76);
+		}
+		// align-items: center;
+	}
+
+	&__logo {
+		@media (max-width: $tablet) {
+			text-align: center;
+		}
+		img {
+			width: rem(80);
+			height: rem(80);
+		}
+	}
+}
+.spollers {
+	row-gap: rem(10);
+	@include adaptiveValue('column-gap', 20, 15, 1110, 991);
+	@media (min-width: $mobile) {
+		grid-template-columns: minmax(rem(275), rem(280)) minmax(rem(120), rem(150)) minmax(rem(200), rem(250));
+		justify-content: space-between;
+	}
+	&__item {
+	}
+
+	&__title {
+		font-weight: 500;
+		font-size: rem(16);
+		line-height: 1.35;
+		letter-spacing: 0.05em;
+		text-transform: uppercase;
+		color: #000000;
+
+		&:not(:last-child) {
+			@include adaptiveValue('margin-bottom', 20, 10, 0, 991, 479);
+		}
+	}
+
+	&__body {
+		@media (max-width: $mobile) {
+			background: #ffffff;
+		}
+	}
+
+	&__list {
+	}
+
+	&__link {
+	}
+
+	&__social {
+	}
+
+	&__copy {
+	}
+}
+.list-spollers {
+	display: flex;
+	flex-direction: column;
+	row-gap: rem(10);
+	&__item {
+	}
+	&__link {
+		font-weight: 400;
+		font-size: rem(13);
+		line-height: math.div(16, 13);
+		letter-spacing: 0.05em;
+		text-transform: uppercase;
+		color: #000000;
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: underline;
+				color: #d1a954;
+			}
+		}
+	}
+}
+.social-spollers {
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: rem(20);
+	row-gap: rem(10);
+	&:not(:last-child) {
+		@include adaptiveValue('margin-bottom', 30, 20, 0, 1100, 768);
+	}
+	&__link {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		padding: rem(10);
+		background: rgba(37, 7, 54, 0.8);
+		border: rem(1) solid rgba(209, 169, 84, 0.9);
+		border-radius: rem(10);
+		svg {
+			width: rem(35);
+			height: rem(35);
+			fill: #d1a954;
+			transition: transform 0.3s ease 0s;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				svg {
+					transform: scale(1.1);
+				}
+			}
+		}
+	}
+}
+.spollers-restaurant {
+	&__body {
+		@include adaptiveValue('row-gap', 20, 15, 0, 991, 768);
+		& > :nth-child(n) {
+			column-gap: rem(15);
+		}
+		& > :nth-child(1) {
+			flex-grow: 0;
+		}
+	}
+
+	&__location {
+	}
+
+	&__phone {
+	}
+
+	&__mail {
+	}
+}
 
 //====================================================================================================
