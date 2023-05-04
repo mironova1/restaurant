@@ -90,9 +90,9 @@
 							</div>
 							<div class="about-restaurant__video-wrapper">
 								<div class="about-restaurant__video video-restaurant">
-									<video preload="metadata" poster="../src/videos/preview.png" controls class="video-restaurant__item">
-										<source src="../src/videos/restaurant.webm" type="video/webm" />
-										<source src="../src/videos/restaurant.mp4" type="video/mp4" />
+									<video preload="metadata" poster="../dist/videos/preview.png" controls class="video-restaurant__item">
+										<source src="../dist/videos/restaurant.webm" type="video/webm" />
+										<source src="../dist/videos/restaurant.mp4" type="video/mp4" />
 										<!-- <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" /> -->
 									</video>
 								</div>
@@ -161,10 +161,14 @@
 				<section class="gallery">
 					<div class="gallery__container">
 						<div data-gallery class="gallery__grid grid-gallery">
-							<div class="grid-gallery__headline grid-gallery__element--1 photo-1">
+							<!-- <div class="grid-gallery__headline grid-gallery__element--1 photo-1">
 								<h2>галерея</h2>
 								<img src="@img/logo.png" alt="Logo" />
-							</div>
+							</div> -->
+							<a href="@img/logo.png" class="grid-gallery__image grid-gallery__headline grid-gallery__element--1 photo-1">
+								<h2>галерея</h2>
+								<img alt="Логотип" src="@img/logo.png" class="grid-gallery__preview" />
+							</a>
 							<a href="@img/gallery/image-full-1.jpg" class="grid-gallery__image grid-gallery__element--2 photo-2">
 								<img alt="Весілля" src="@img/gallery/image-preview-1.png" class="grid-gallery__preview" />
 							</a>
@@ -193,17 +197,17 @@
 					<div class="social-media__container">
 						<h2 class="social-media__title">дізнайтесь про нас більше</h2>
 						<div class="social-media__icons">
-							<a href="#" class="social-media__icon">
+							<a href="#" class="social-media__icon" target="_blank">
 								<svg>
 									<use xlink:href="@img/icons/icons.svg#tiktok"></use>
 								</svg>
 							</a>
-							<a href="#" class="social-media__icon">
+							<a href="#" class="social-media__icon" target="_blank">
 								<svg>
 									<use xlink:href="@img/icons/icons.svg#instagram"></use>
 								</svg>
 							</a>
-							<a href="#" class="social-media__icon">
+							<a href="#" class="social-media__icon" target="_blank">
 								<svg>
 									<use xlink:href="@img/icons/icons.svg#facebook"></use>
 								</svg>
@@ -211,9 +215,80 @@
 						</div>
 					</div>
 				</section>
+				<section class="contacts">
+					<div class="contacts__container">
+						<div class="contacts__body">
+							<div class="contacts__headline">
+								<h2 class="contacts__title">хочете провести захід?</h2>
+								<p class="contacts__desc">
+									Або у вас залишилися питання, на які ми зможемо вам відповісти у процесі розмови – напишіть нам. Ми
+									відкриті для діалогу!
+								</p>
+							</div>
+
+							<div class="contacts__location location-rastaurant">
+								<h4 class="location-rastaurant__title">ресторан</h4>
+								<div class="location-rastaurant__body">
+									<div class="location-rastaurant__location">
+										<svg>
+											<use xlink:href="@img/icons/icons.svg#location"></use>
+										</svg>
+										<a href="https://goo.gl/maps/5tgz316ko14uG4qJ9?coh=178571&entry=tt" target="_blank">
+											вулиця Орловська, 36Д Дніпро́
+										</a>
+									</div>
+									<div class="location-rastaurant__phone">
+										<svg>
+											<use xlink:href="@img/icons/icons.svg#phone"></use>
+										</svg>
+										<a href="tel:+380679668587 ">+38 067 966 8587</a>
+									</div>
+									<div class="location-rastaurant__mail">
+										<svg>
+											<use xlink:href="@img/icons/icons.svg#mail"></use>
+										</svg>
+										<a href="mailto:hello@summerpalace.ua" target="_blank">hello@summerpalace.ua</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="contacts__form form-contacts">
+							<!-- id="myForm" data-ajax  data-popup-message="#form-message"-->
+							<form data-popup-message="#form-message" action="files/sendmail/sendtotelegram.php" method="POST">
+								<div class="form-contacts__column">
+									<div class="form-contacts__line">
+										<input name="name" required type="text" data-error="Error" placeholder="Ваше Ім’я" class="input" />
+									</div>
+									<div class="form-contacts__line">
+										<input
+											required
+											data-validate
+											data-required="email"
+											type="text"
+											data-error="Введіть коректний E-mail"
+											placeholder="Ваш E-mail"
+											class="input"
+											name="email"
+										/>
+										<!-- name="form[email]" -->
+									</div>
+									<div class="form-contacts__line">
+										<textarea
+											required
+											class="input"
+											placeholder="Хочу орендувати заклад для проведення дня народження"
+											name="message"
+										></textarea>
+									</div>
+								</div>
+								<button type="submit" class="form-contacts__button button">Надіслати</button>
+							</form>
+						</div>
+					</div>
+				</section>
 			</main>
 			@@include('html/_footer.htm',{})
 		</div>
-		@@include('html/_js.htm',{})
+		@@include('html/_js.htm',{}) @@include('html/_popup.htm',{}),
 	</body>
 </html>

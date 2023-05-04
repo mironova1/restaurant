@@ -17,3 +17,23 @@ function addActiveClass() {
 	}
 }
 addActiveClass();
+
+// const form = document.getElementById('myForm');
+// form.addEventListener('submit', function (event) {
+// 	event.preventDefault();
+
+// 	// Получаем данные из формы
+// 	const formData = new FormData(form);
+// 	const name = formData.get('name');
+// 	const email = formData.get('email');
+// 	const message = formData.get('message');
+
+// 	// Отправляем сообщение в телеграм-бота
+// 	const token = '5979999343:AAHbxXvf3E12lAp_n8s93jd3bspBKc1uNcA';
+// 	const chatId = '-851583258';
+// 	const bot = new TelegramBot(token, {polling: false});
+// 	bot.sendMessage(chatId, `Новое сообщение от ${name} (${email}): ${message}`);
+
+// 	// Очищаем поля формы
+// 	form.reset();
+// });

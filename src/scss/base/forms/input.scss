@@ -1,8 +1,8 @@
 //<INPUT>
 // Сніппет (HTML): inp
-input[type="text"],
-input[type="email"],
-input[type="tel"],
+input[type='text'],
+input[type='email'],
+input[type='tel'],
 textarea {
 	-webkit-appearance: none;
 	-moz-appearance: none;
@@ -10,18 +10,33 @@ textarea {
 }
 .input {
 	border-radius: 0 !important;
+	outline: none;
 	width: 100%;
 	display: block;
-	padding: 0px 20px;
-	border: 1px solid #eee;
+	padding: rem(13) rem(0);
+	border-bottom: rem(0.5) solid #d0d0d0;
+
+	&:nth-child(3) {
+		border: rem(0.5) solid #d0d0d0;
+	}
 	&._form-focus {
+		border-bottom: rem(0.5) solid #d1a954;
 	}
 	&._form-error {
+		// margin-bottom: rem(5);
+
+		border-bottom: rem(0.5) solid #ff0000;
+	}
+	@media (any-hover: hover) {
+		&:hover {
+			border-bottom: rem(0.5) solid #ebb540;
+		}
 	}
 }
 .input[placeholder]:not([data-placeholder-nohiden]) {
 	&::placeholder {
 		transition: opacity 0.3s;
+		// color: #616161;
 	}
 	&:focus::placeholder {
 		opacity: 0;
@@ -30,5 +45,13 @@ textarea {
 
 textarea.input {
 	resize: none;
-	padding: 0px 0px;
+	padding: 0.875rem 1.0625rem;
+	&._form-focus {
+		border: rem(0.5) solid #d1a954;
+	}
+	@media (any-hover: hover) {
+		&:hover {
+			border: rem(0.5) solid #ebb540;
+		}
+	}
 }

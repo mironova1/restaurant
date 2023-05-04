@@ -74,6 +74,7 @@
 	"dependencies": {
 		"gulp-cheerio": "^1.0.0",
 		"isotope-layout": "^3.0.6",
+		"node-telegram-bot-api": "^0.61.0",
 		"simplebar": "latest"
 	}
 }
