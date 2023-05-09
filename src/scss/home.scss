@@ -1,8 +1,5 @@
 //====================================================================================================
 
-.page-main {
-}
-
 .main-page {
 	@include adaptiveValue('padding-top', 150, 50, 0, 1110, 768);
 	@include adaptiveValue('padding-bottom', 250, 100, 0, 1100, 768);
