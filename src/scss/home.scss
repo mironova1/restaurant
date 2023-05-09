@@ -182,6 +182,9 @@
 		@extend %responsiveVideo;
 		border: rem(10) solid #ffffff;
 		filter: drop-shadow(rem(0) rem(0) rem(30) rgba(126, 126, 126, 0.5));
+		@media (max-width: $mobileSmall) {
+			border: rem(5) solid #ffffff;
+		}
 	}
 }
 .video-restaurant {
