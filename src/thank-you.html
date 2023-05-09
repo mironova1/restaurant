@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="uk">
+	@@include('html/_head.htm',{ "title":"Thank you page" })
+	<body>
+		<div class="wrapper">
+			@@include('html/_header.htm',{})
+			<main class="page thank-you">
+				<div class="thank-you__wrapper">
+					<div class="thank-you__container">
+						<div class="thank-you__body">
+							<svg class="thank-you__icon">
+								<use xlink:href="@img/icons/icons.svg#done"></use>
+							</svg>
+							<div class="thank-you__headline">
+								<h1 class="thank-you__title">Заявка успішно відпралена</h1>
+								<h2 class="thank-you__sub-title">Ми зв'яжемося з вами найближчим часом!</h2>
+							</div>
+						</div>
+						<a href="home.html" class="button thank-you__button">Перейти на головну</a>
+					</div>
+				</div>
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_popup.htm',{}) @@include('html/_js.htm',{})
+	</body>
+</html>

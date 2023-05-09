@@ -1,0 +1,58 @@
+.thank-you {
+	&__wrapper {
+		@include adaptiveValue('padding-top', 150, 50, 0, 1110, 768);
+		@include adaptiveValue('padding-bottom', 150, 50, 0, 1110, 768);
+	}
+	&__container {
+		display: flex;
+		align-items: center;
+		@media (max-width: $mobile) {
+			flex-direction: column;
+			row-gap: rem(30);
+		}
+	}
+
+	&__body {
+		display: flex;
+		align-items: center;
+		flex: 1 1 auto;
+		column-gap: rem(30);
+		@media (max-width: $mobile) {
+			align-items: flex-start;
+		}
+	}
+
+	&__icon {
+		width: rem(80);
+		height: rem(80);
+		fill: #3d0060;
+		@media (max-width: $mobileSmall) {
+			width: rem(60);
+			height: rem(60);
+		}
+	}
+
+	&__headline {
+		display: flex;
+		flex-direction: column;
+		row-gap: rem(10);
+		color: #000000;
+		line-height: 1.4;
+		font-weight: 500;
+		letter-spacing: 0.02em;
+	}
+
+	&__title {
+		@include adaptiveValue('font-size', 25, 20, 4, 1110, 768);
+	}
+
+	&__sub-title {
+		@include adaptiveValue('font-size', 17, 14, 4, 1110, 768);
+	}
+	&__button {
+		@media (max-width: $mobile) {
+			width: 100%;
+			font-size: rem(16);
+		}
+	}
+}

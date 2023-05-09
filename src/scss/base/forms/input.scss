@@ -23,8 +23,6 @@ textarea {
 		border-bottom: rem(0.5) solid #d1a954;
 	}
 	&._form-error {
-		// margin-bottom: rem(5);
-
 		border-bottom: rem(0.5) solid #ff0000;
 	}
 	@media (any-hover: hover) {
@@ -36,10 +34,9 @@ textarea {
 .input[placeholder]:not([data-placeholder-nohiden]) {
 	&::placeholder {
 		transition: opacity 0.3s;
-		// color: #616161;
 	}
 	&:focus::placeholder {
-		opacity: 0;
+		opacity: 0.2;
 	}
 }
 

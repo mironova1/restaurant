@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 	@@include('html/_head.htm',{ "title":"HomePage" })
 	<body>
 		<div class="wrapper">
@@ -253,25 +253,40 @@
 							</div>
 						</div>
 						<div class="contacts__form form-contacts">
-							<!-- id="myForm" data-ajax  data-popup-message="#form-message"-->
-							<form data-popup-message="#form-message" action="files/sendmail/sendtotelegram.php" method="POST">
+							<!-- id="myForm" data-ajax data-dev  data-popup-message="#form-message"-->
+							<form data-ajax data-popup-message="#form-message" action="files/sendmail/sendmail.php" method="POST">
 								<div class="form-contacts__column">
 									<div class="form-contacts__line">
-										<input name="name" required type="text" data-error="Error" placeholder="Ваше Ім’я" class="input" />
+										<!-- <label for="name">Ваше Ім’я*</label> -->
+										<input name="name" required type="text" data-error="Error" placeholder="Ваше Ім’я*" class="input" />
 									</div>
 									<div class="form-contacts__line">
+										<!-- <label for="phone_number">Номер телефону*</label> -->
+										<input
+											class="input"
+											type="tel"
+											id="phone_number"
+											name="phone_number"
+											placeholder="Ваш телефон*"
+											required
+											pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
+										/>
+									</div>
+
+									<div class="form-contacts__line">
+										<!-- <label for="phone_number">Пошта*</label> -->
 										<input
 											required
 											data-validate
 											data-required="email"
 											type="text"
 											data-error="Введіть коректний E-mail"
-											placeholder="Ваш E-mail"
+											placeholder="Ваш E-mail*"
 											class="input"
 											name="email"
 										/>
-										<!-- name="form[email]" -->
 									</div>
+									<!-- name="form[email]" -->
 									<div class="form-contacts__line">
 										<textarea
 											required
@@ -327,6 +342,6 @@
 			</main>
 			@@include('html/_footer.htm',{})
 		</div>
-		@@include('html/_js.htm',{}) @@include('html/_popup.htm',{})
+		@@include('html/_popup.htm',{}) @@include('html/_popup-mail.htm',{}) @@include('html/_js.htm',{})
 	</body>
 </html>
