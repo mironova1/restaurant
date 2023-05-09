@@ -106,7 +106,15 @@
 		max-width: rem(250);
 	}
 }
+.iti__flag {
+	background-image: url('../img/form/flags.png');
+}
 
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+	.iti__flag {
+		background-image: url('../img/form/flags@2x.png');
+	}
+}
 //====================================================================================================
 // ! page about restaurant
 .about-restaurant {
@@ -534,9 +542,10 @@
 		padding-left: rem(5);
 	}
 	&__column {
+		font-size: rem(16);
 		display: flex;
 		flex-direction: column;
-		row-gap: rem(10);
+		row-gap: rem(5);
 
 		&:not(:last-child) {
 			@include adaptiveValue('margin-bottom', 35, 20, 0, 800, 600);
@@ -569,9 +578,17 @@
 			padding: 0.875rem 1.0625rem;
 			min-height: rem(196);
 		}
-		&:nth-child(2) {
+		&:nth-child(3) {
 			&:not(:last-child) {
-				@include adaptiveValue('margin-bottom', 35, 25, 0, 991, 768);
+				@include adaptiveValue('margin-bottom', 35, 20, 0, 991, 768);
+			}
+		}
+		label {
+			display: none;
+		}
+		&._form-focus {
+			label {
+				display: block;
 			}
 		}
 	}

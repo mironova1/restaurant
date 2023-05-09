@@ -1,8 +1,37 @@
-<div id="form-message" aria-hidden="true" class="popup">
+<div id="sendToTelegram" aria-hidden="true" class="popup popup__send-telegram send-telegram">
 	<div class="popup__wrapper">
-		<div class="popup__content">
-			<button data-close type="button" class="popup__close">Закрити</button>
-			<div class="popup__text">Повідомлення успішно відправлено!</div>
+		<div class="popup__content send-telegram__content">
+			<button data-close type="button" class="popup__close"></button>
+			<div class="popup__text">
+				<!-- data-ajax  data-popup-message="#form-message"-->
+				<form action="files/sendmail/sendtotelegram.php" class="form-send" method="POST">
+					<div class="form-send__line">
+						<div class="form-send__title">Залиште заявку і наш менеджер зателефонує вам</div>
+					</div>
+					<div class="form-send__line">
+						<input
+							name="name"
+							required
+							type="text"
+							data-error="Error"
+							placeholder="Ваше Ім’я"
+							class="input form-send__input"
+						/>
+					</div>
+					<div class="form-send__line">
+						<input
+							class="input form-send__input"
+							type="tel"
+							id="phone_number"
+							name="phone_number"
+							placeholder="Ваш телефон 098 435 22 33"
+							required
+							pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
+						/>
+					</div>
+					<button type="submit" class="form-send__button button">Надіслати</button>
+				</form>
+			</div>
 		</div>
 	</div>
 </div>
