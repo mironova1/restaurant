@@ -2,14 +2,23 @@
 	border: rem(1) solid rgba(209, 169, 84, 0.9);
 	padding: rem(5) rem(0);
 	color: #d1a954;
-
 	// background-color: red;
 }
 //====================================================================================================
 .header {
 	@include adaptiveValue('padding-top', 20, 10, 0, 991, 767);
 	@include adaptiveValue('padding-bottom', 20, 10, 0, 991, 767);
-	border-bottom: rem(1) solid #000;
+	// border-bottom: rem(1) solid #000;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 100;
+	transition: all 0.1s ease 0s;
+	background: #ffffff;
+	&._header-scroll {
+		box-shadow: rem(0) rem(4) rem(20) rgba(0, 0, 0, 0.1);
+	}
 	&__container {
 		display: flex;
 		align-items: center;
@@ -57,7 +66,7 @@
 				background: #f8f8f8;
 				min-height: rem(73);
 				transition: right 0.3s cubic-bezier(0, 0, 0.2, 1) 0s;
-				border-bottom: 1px solid #000;
+				box-shadow: rem(0) rem(4) rem(20) rgba(0, 0, 0, 0.1);
 			}
 			.menu-open & {
 				right: 0;
@@ -80,7 +89,7 @@
 		row-gap: rem(5);
 		flex-wrap: wrap;
 		@media (max-width: $mobile) {
-			padding-top: rem(82);
+			padding-top: rem(100);
 			font-size: rem(30);
 			flex-direction: column;
 			align-items: center;
