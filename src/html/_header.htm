@@ -1,14 +1,24 @@
-<header data-scroll="120" class="header">
+<header data-lp data-scroll="120" class="header">
 	<div class="header__container">
 		<a href="home.html" class="header__logo"><img src="@img/logo.png" alt="logo: restaurant" /></a>
 		<div class="header__menu menu">
 			<nav class="menu__body">
 				<ul class="menu__list">
-					<li class="menu__item"><a href="#" class="menu__link">Головна</a></li>
-					<li class="menu__item"><a href="#" class="menu__link">Про ресторан</a></li>
-					<li class="menu__item"><a href="#" class="menu__link">Меню</a></li>
-					<li class="menu__item"><a href="#" class="menu__link">Про нас</a></li>
-					<li class="menu__item"><a href="#" class="menu__link">Галерея</a></li>
+					<li class="menu__item">
+						<a data-goto-header data-goto=".main-page" href="#" class="menu__link">Головна</a>
+					</li>
+					<li class="menu__item">
+						<a data-goto-header data-goto=".about-restaurant" href="#" class="menu__link">Про ресторан</a>
+					</li>
+					<li class="menu__item">
+						<a data-goto-header data-goto="." href="menu.html" class="menu__link" target="_blank">Меню</a>
+					</li>
+					<li class="menu__item">
+						<a data-goto-header data-goto=".gallery" href="#" class="menu__link">Галерея</a>
+					</li>
+					<li class="menu__item">
+						<a data-goto-header data-goto=".social-media" href="#" class="menu__link">Про нас</a>
+					</li>
 					<a data-popup="#sendToTelegram" href="" class="button menu__button">Замовити столик</a>
 				</ul>
 			</nav>
