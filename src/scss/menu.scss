@@ -1,0 +1,64 @@
+.menu-page {
+	@include adaptiveValue('padding-top', 120, 80, 0, 1110, 768);
+	@include adaptiveValue('padding-bottom', 150, 50, 0, 1110, 768);
+	&__container {
+	}
+
+	&__prodcut {
+	}
+}
+.prodcut-menu {
+	&__section {
+		display: flex;
+		flex-direction: column;
+		@include adaptiveValue('row-gap', 45, 20, 0, 1110, 600);
+		&:not(:last-child) {
+			margin-bottom: rem(50);
+		}
+	}
+
+	&__title {
+		font-weight: 500;
+		@include adaptiveValue('font-size', 36, 22, 0, 1110, 320);
+		line-height: 1.45;
+		letter-spacing: 0.05em;
+		text-transform: uppercase;
+		color: #000000;
+		text-align: center;
+	}
+
+	&__grid {
+	}
+}
+.grid-menu {
+	display: grid;
+	row-gap: rem(30);
+	@media (min-width: em(600)) {
+		column-gap: rem(30);
+		grid-template-columns: repeat(2, 1fr);
+	}
+	@media (min-width: $mobile) {
+		grid-template-columns: repeat(3, 1fr);
+	}
+	&__item {
+		display: flex;
+		flex-direction: column;
+		row-gap: rem(10);
+	}
+
+	&__title {
+		font-weight: 500;
+		@include adaptiveValue('font-size', 18, 16, 0, 1110, 768);
+		line-height: 1.35;
+		letter-spacing: 0.05em;
+		text-transform: uppercase;
+		color: #000000;
+	}
+
+	&__desc {
+		font-weight: 400;
+		@include adaptiveValue('font-size', 16, 14, 0, 1110, 768);
+		line-height: 1.45;
+		color: #000000;
+	}
+}
