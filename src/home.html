@@ -5,7 +5,7 @@
 		<div class="wrapper">
 			@@include('html/_header.htm',{})
 			<main class="page">
-				<section class="page-main main-page">
+				<div class="page-main main-page">
 					<div class="main-page__container">
 						<div class="main-page-slider__wrapper">
 							<!-- Оболонка слайдера -->
@@ -30,7 +30,7 @@
 									<div class="main-page__slide swiper-slide main-page-slide">
 										<div class="main-page-slide__wrapper">
 											<div class="main-page-slide__image-ibg">
-												<img src="@img/main/image-2.png" alt="picture" />
+												<img src="@img/main/image-2.png" alt="picture" loading="lazy" />
 											</div>
 											<div class="main-page-slide__desc desc-slide">
 												<div class="desc-slide__wrapper">
@@ -44,7 +44,7 @@
 									<div class="main-page__slide swiper-slide main-page-slide">
 										<div class="main-page-slide__wrapper">
 											<div class="main-page-slide__image-ibg">
-												<img src="@img/main/image-3.png" alt="picture" />
+												<img src="@img/main/image-3.png" alt="picture" loading="lazy" />
 											</div>
 											<div class="main-page-slide__desc desc-slide">
 												<div class="desc-slide__wrapper">
@@ -58,11 +58,25 @@
 									<div class="main-page__slide swiper-slide main-page-slide">
 										<div class="main-page-slide__wrapper">
 											<div class="main-page-slide__image-ibg">
-												<img src="@img/main/image-3.png" alt="picture" />
+												<img src="@img/main/image-4.png" alt="picture" loading="lazy" />
 											</div>
 											<div class="main-page-slide__desc desc-slide">
 												<div class="desc-slide__wrapper">
-													<div class="desc-slide__title">Звані вечори</div>
+													<div class="desc-slide__title">шоу "Кетрін"</div>
+													<div class="desc-slide__text">Відзначайте найкращі свята у кращому місці Дніпра!</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- Слайд 5 -->
+									<div class="main-page__slide swiper-slide main-page-slide">
+										<div class="main-page-slide__wrapper">
+											<div class="main-page-slide__image-ibg">
+												<img src="@img/main/image-5.png" alt="picture" loading="lazy" />
+											</div>
+											<div class="main-page-slide__desc desc-slide">
+												<div class="desc-slide__wrapper">
+													<div class="desc-slide__title">Дні народження</div>
 													<div class="desc-slide__text">Відзначайте найкращі свята у кращому місці Дніпра!</div>
 												</div>
 											</div>
@@ -73,11 +87,11 @@
 							<!-- Якщо потрібна пагінація -->
 							<div class="main-page__pagination swiper-pagination"></div>
 							<!-- Якщо потрібна навігація (ліворуч/праворуч) -->
-							<button type="button" class="main-page__button--prev swiper-button-prev"></button>
-							<button type="button" class="main-page__button--next swiper-button-next"></button>
+							<button type="button" class="main-page__button--prev swiper-button-prev" aria-label="button prev"></button>
+							<button type="button" class="main-page__button--next swiper-button-next" aria-label="button next"></button>
 						</div>
 					</div>
-				</section>
+				</div>
 				<section class="about-restaurant-page about-restaurant">
 					<div class="about-restaurant__background"></div>
 					<div class="about-restaurant__container">
@@ -90,7 +104,7 @@
 							</div>
 							<div class="about-restaurant__video-wrapper">
 								<div class="about-restaurant__video video-restaurant">
-									<video preload="metadata" poster="../dist/videos/preview.png" controls class="video-restaurant__item">
+									<video preload="metadata" poster="../dist/videos/preview.jpg" controls class="video-restaurant__item">
 										<source src="../dist/videos/restaurant.webm" type="video/webm" />
 										<source src="../dist/videos/restaurant.mp4" type="video/mp4" />
 										<!-- <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" /> -->
@@ -116,8 +130,8 @@
 							<div class="advantages__body">
 								<div class="desc-restaurant__advantages advantages">
 									<div class="advantages__picture">
-										<img src="@img/about-us/descr1.png" alt="picture advantages" />
-										<h4 class="advantages__sub-title">майданчик</h4>
+										<img width="46" height="30" src="@img/about-us/descr1.png" alt="picture advantages" />
+										<h3 class="advantages__sub-title">майданчик</h3>
 									</div>
 									<p class="advantages__text">
 										Поєднання класичних інтер'єрів та сучасних технічних можливостей вигідно відрізняє Бакинськй дворик
@@ -126,8 +140,8 @@
 								</div>
 								<div class="desc-restaurant__advantages advantages">
 									<div class="advantages__picture">
-										<img src="@img/about-us/descr2.png" alt="picture advantages" />
-										<h4 class="advantages__sub-title">інтер'єри</h4>
+										<img width="39" height="20" src="@img/about-us/descr2.png" alt="picture advantages" />
+										<h3 class="advantages__sub-title">інтер'єри</h3>
 									</div>
 									<p class="advantages__text">
 										Вишукане внутрішнє оздоблення Літнього Палацу – тонко виконана стилізація з використанням
@@ -136,8 +150,8 @@
 								</div>
 								<div class="desc-restaurant__advantages advantages">
 									<div class="advantages__picture">
-										<img src="@img/about-us/descr3.png" alt="picture advantages" />
-										<h4 class="advantages__sub-title">технології</h4>
+										<img width="37" height="31" src="@img/about-us/descr3.png" alt="picture advantages" />
+										<h3 class="advantages__sub-title">технології</h3>
 									</div>
 									<p class="advantages__text">
 										Можливості «Літнього Палацу» практично безмежні з погляду проведення заходів різного формату та
@@ -146,8 +160,8 @@
 								</div>
 								<div class="desc-restaurant__advantages advantages">
 									<div class="advantages__picture">
-										<img src="@img/about-us/descr4.png" alt="picture advantages" />
-										<h4 class="advantages__sub-title">обладнання</h4>
+										<img width="43" height="37" src="@img/about-us/descr4.png" alt="picture advantages" />
+										<h3 class="advantages__sub-title">обладнання</h3>
 									</div>
 									<p class="advantages__text">
 										Встановлено комплект найсучаснішого звукового обладнання, яке приємно здивує навіть знавця якісного
@@ -161,34 +175,27 @@
 				<section class="gallery-page gallery">
 					<div class="gallery__container">
 						<div data-gallery class="gallery__grid grid-gallery">
-							<!-- <div class="grid-gallery__headline grid-gallery__element--1 photo-1">
-								<h2>галерея</h2>
-								<img src="@img/logo.png" alt="Logo" />
-							</div> -->
-							<a href="@img/logo.png" class="grid-gallery__image grid-gallery__headline grid-gallery__element--1 photo-1">
+							<a href="@img/logo.png" class="grid-gallery__image grid-gallery__headline grid-gallery__element--1">
 								<h2>галерея</h2>
 								<img alt="Логотип" src="@img/logo.png" class="grid-gallery__preview" />
 							</a>
-							<a href="@img/gallery/image-full-1.jpg" class="grid-gallery__image grid-gallery__element--2 photo-2">
-								<img alt="Весілля" src="@img/gallery/image-preview-1.png" class="grid-gallery__preview" />
+							<a href="@img/gallery/image-full-1.jpg" class="grid-gallery__image-ibg grid-gallery__element--2">
+								<img alt="Весілля" src="@img/gallery/image-preview-1.jpg" class="grid-gallery__preview" />
 							</a>
-							<a href="@img/gallery/image-full-2.jpg" class="grid-gallery__image grid-gallery__element--3 photo-3">
-								<img alt="Вечірка" src="@img/gallery/image-preview-2.png" class="grid-gallery__preview" />
+							<a href="@img/gallery/image-full-2.jpg" class="grid-gallery__image-ibg grid-gallery__element--3">
+								<img alt="Вечірка" src="@img/gallery/image-preview-2.jpg" class="grid-gallery__preview" />
 							</a>
-							<a
-								href="@img/gallery/image-full-2.jpg"
-								class="grid-gallery__reserve grid-gallery__image grid-gallery__element--3 photo-3"
-							>
-								<img alt="Вечірка" src="@img/gallery/image-preview-2.png" class="grid-gallery__preview" />
+							<a href="@img/gallery/image-full-md3.jpg" class="grid-gallery__image-ibg grid-gallery__element--3 photo-md3">
+								<img alt="Вечірка" src="@img/gallery/image-preview-md3.jpg" class="grid-gallery__preview" />
 							</a>
-							<a href="@img/gallery/image-full-4.jpg" class="grid-gallery__image grid-gallery__element--4 photo-4">
-								<img alt="Фуршет" src="@img/gallery/image-preview-4.png" class="grid-gallery__preview" />
+							<a href="@img/gallery/image-full-4.jpg" class="grid-gallery__image-ibg grid-gallery__element--4">
+								<img alt="Фуршет" src="@img/gallery/image-preview-4.jpg" class="grid-gallery__preview" />
 							</a>
-							<a href="@img/gallery/image-full-3.jpg" class="grid-gallery__image grid-gallery__element--5 photo-5">
-								<img alt="Компанія" src="@img/gallery/image-preview-3.png" class="grid-gallery__preview" />
+							<a href="@img/gallery/image-full-3.jpg" class="grid-gallery__image-ibg grid-gallery__element--5">
+								<img alt="Вечірка" src="@img/gallery/image-preview-3.jpg" class="grid-gallery__preview" />
 							</a>
-							<a href="@img/gallery/image-full-5.jpg" class="grid-gallery__image grid-gallery__element--6 photo-6">
-								<img alt="Фуршет" src="@img/gallery/image-preview-5.png" class="grid-gallery__preview" />
+							<a href="@img/gallery/image-full-5.jpg" class="grid-gallery__image-ibg grid-gallery__element--6">
+								<img alt="Компанія" src="@img/gallery/image-preview-5.jpg" class="grid-gallery__preview" />
 							</a>
 						</div>
 					</div>
@@ -201,6 +208,7 @@
 								href="https://www.tiktok.com/@bakinskiy_dvorik1?_t=8ZvVEG3kzQ6&_r=1"
 								class="social-media__icon"
 								target="_blank"
+								aria-label="social link tiktok"
 							>
 								<svg>
 									<use xlink:href="@img/icons/icons.svg#tiktok"></use>
@@ -210,12 +218,18 @@
 								href="https://www.instagram.com/bakinskiy.dvorik_dnepr/?igshid=YmMyMTA2M2Y%3D"
 								class="social-media__icon"
 								target="_blank"
+								aria-label="social link instagram"
 							>
 								<svg>
 									<use xlink:href="@img/icons/icons.svg#instagram"></use>
 								</svg>
 							</a>
-							<a href="https://www.facebook.com/bakinskiydvorik1" class="social-media__icon" target="_blank">
+							<a
+								href="https://www.facebook.com/bakinskiydvorik1"
+								class="social-media__icon"
+								target="_blank"
+								aria-label="social link facebook"
+							>
 								<svg>
 									<use xlink:href="@img/icons/icons.svg#facebook"></use>
 								</svg>
@@ -235,7 +249,7 @@
 							</div>
 
 							<div class="contacts__location location-restaurant">
-								<h4 class="location-restaurant__title">ресторан</h4>
+								<h3 class="location-restaurant__title">ресторан</h3>
 								<div class="location-restaurant__body restaurant-info">
 									<div class="location-restaurant__location restaurant-info__location">
 										<svg>
@@ -270,17 +284,16 @@
 									</div>
 									<div class="form-contacts__line">
 										<!-- <label for="phone_number">Номер телефону*</label> -->
+										<!-- id="phone_number" -->
 										<input
 											class="input"
 											type="tel"
-											id="phone_number"
 											name="phone_number"
 											placeholder="Ваш телефон*"
 											required
 											pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
 										/>
 									</div>
-
 									<div class="form-contacts__line">
 										<!-- <label for="phone_number">Пошта*</label> -->
 										<input
@@ -317,6 +330,7 @@
 								href="https://www.instagram.com/bakinskiy.dvorik_dnepr/?igshid=YmMyMTA2M2Y%3D"
 								class="our-instagram__link"
 								target="_blank"
+								aria-label="social link our-instagram"
 							>
 								<svg>
 									<use xlink:href="@img/icons/icons.svg#instagram"></use>
@@ -326,27 +340,23 @@
 					</div>
 					<div class="our-instagram__gallery gallery-instagram">
 						<div data-gallery class="gallery-instagram__grid">
-							<a href="@img/our-instagram/image-2.1.png" class="gallery-instagram__image-ibg">
-								<img
-									alt="Весілля"
-									src="https://images.unsplash.com/photo-1682879870129-0ddc92909f1c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0NHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60"
-									class="gallery-instagram__preview"
-								/>
+							<a href="@img/our-instagram/image-full-1.jpg" class="gallery-instagram__image-ibg">
+								<img alt="Весілля" src="@img/our-instagram/image-preview-1.jpg" class="gallery-instagram__preview" />
 							</a>
-							<a href="@img/our-instagram/image-2.2.png" class="gallery-instagram__image-ibg">
-								<img alt="Весілля" src="@img/our-instagram/image-2.2.png" class="gallery-instagram__preview" />
+							<a href="@img/our-instagram/image-full-2.jpg" class="gallery-instagram__image-ibg">
+								<img alt="Весілля" src="@img/our-instagram/image-preview-2.jpg" class="gallery-instagram__preview" />
 							</a>
-							<a href="@img/our-instagram/image-2.3.png" class="gallery-instagram__image-ibg">
-								<img alt="Весілля" src="@img/our-instagram/image-2.3.png" class="gallery-instagram__preview" />
+							<a href="@img/our-instagram/image-full-3.jpg" class="gallery-instagram__image-ibg">
+								<img alt="Весілля" src="@img/our-instagram/image-preview-3.jpg" class="gallery-instagram__preview" />
 							</a>
-							<a href="@img/our-instagram/image-2.4.png" class="gallery-instagram__image-ibg">
-								<img alt="Весілля" src="@img/our-instagram/image-2.4.png" class="gallery-instagram__preview" />
+							<a href="@img/our-instagram/image-full-4.jpg" class="gallery-instagram__image-ibg">
+								<img alt="Весілля" src="@img/our-instagram/image-preview-4.jpg" class="gallery-instagram__preview" />
 							</a>
-							<a href="@img/our-instagram/image-2.5.png" class="gallery-instagram__image-ibg">
-								<img alt="Весілля" src="@img/our-instagram/image-2.5.png" class="gallery-instagram__preview" />
+							<a href="@img/our-instagram/image-full-5.jpg" class="gallery-instagram__image-ibg">
+								<img alt="Весілля" src="@img/our-instagram/image-preview-5.jpg" class="gallery-instagram__preview" />
 							</a>
-							<a href="@img/our-instagram/image-2.6.png" class="gallery-instagram__image-ibg">
-								<img alt="Весілля" src="@img/our-instagram/image-2.6.png" class="gallery-instagram__preview" />
+							<a href="@img/our-instagram/image-full-6.jpg" class="gallery-instagram__image-ibg">
+								<img alt="Весілля" src="@img/our-instagram/image-preview-6.jpg" class="gallery-instagram__preview" />
 							</a>
 						</div>
 					</div>

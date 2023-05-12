@@ -64,6 +64,7 @@
 	}
 	&__text {
 	}
+	transition: all 0.3s ease 0s;
 }
 .send-telegram {
 	&__content {
@@ -84,6 +85,12 @@
 		font-size: rem(16);
 	}
 	&__button {
+		background-color: #d4a02e;
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: #e1a82e;
+			}
+		}
 		width: 100%;
 		font-size: rem(16);
 		padding: rem(15) rem(20);
