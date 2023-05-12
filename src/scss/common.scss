@@ -30,6 +30,7 @@
 	&__mail {
 	}
 }
+// ! POPUP
 .popup {
 	&__send-telegram {
 	}
@@ -80,6 +81,7 @@
 	}
 	&__input {
 		padding-left: rem(10);
+		font-size: rem(16);
 	}
 	&__button {
 		width: 100%;

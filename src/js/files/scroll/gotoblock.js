@@ -1,8 +1,8 @@
 // Підключення функціоналу "Чертоги Фрілансера"
-import { isMobile, menuClose, getHash, FLS } from "../functions.js";
+import {isMobile, menuClose, getHash, FLS} from '../functions.js';
 // Підключення доповнення для збільшення можливостей
 // Документація: https://github.com/cferdinandi/smooth-scroll
-// import SmoothScroll from 'smooth-scroll';
+import SmoothScroll from 'smooth-scroll';
 //==============================================================================================================================================================================================================================================================================================================================
 
 // Модуль плавної проктутки до блоку
@@ -34,7 +34,7 @@ export let gotoBlock = (targetBlock, noHeader = false, speed = 500, offsetTop = 
 			easing: 'easeOutQuad',
 		};
 		// Закриваємо меню, якщо воно відкрите
-		document.documentElement.classList.contains("menu-open") ? menuClose() : null;
+		document.documentElement.classList.contains('menu-open') ? menuClose() : null;
 
 		if (typeof SmoothScroll !== 'undefined') {
 			// Прокручування з використанням доповнення
@@ -42,11 +42,13 @@ export let gotoBlock = (targetBlock, noHeader = false, speed = 500, offsetTop = 
 		} else {
 			// Прокручування стандартними засобами
 			let targetBlockElementPosition = targetBlockElement.getBoundingClientRect().top + scrollY;
-			targetBlockElementPosition = headerItemHeight ? targetBlockElementPosition - headerItemHeight : targetBlockElementPosition;
+			targetBlockElementPosition = headerItemHeight
+				? targetBlockElementPosition - headerItemHeight
+				: targetBlockElementPosition;
 			targetBlockElementPosition = offsetTop ? targetBlockElementPosition - offsetTop : targetBlockElementPosition;
 			window.scrollTo({
 				top: targetBlockElementPosition,
-				behavior: "smooth"
+				behavior: 'smooth',
 			});
 		}
 		FLS(`[gotoBlock]: Юхуу...їдемо до ${targetBlock}`);

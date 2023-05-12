@@ -47,6 +47,9 @@
 		&:not(:last-child) {
 			@include adaptiveValue('margin-bottom', 20, 10, 0, 991, 479);
 		}
+		@media (max-width: $mobile) {
+			font-size: rem(20);
+		}
 	}
 
 	&__body {
@@ -71,6 +74,9 @@
 	display: flex;
 	flex-direction: column;
 	row-gap: rem(10);
+	@media (max-width: $mobile) {
+		row-gap: rem(20);
+	}
 	&__item {
 	}
 	&__link {
@@ -85,6 +91,9 @@
 				text-decoration: underline;
 				color: #d1a954;
 			}
+		}
+		@media (max-width: $mobile) {
+			font-size: rem(16);
 		}
 	}
 }

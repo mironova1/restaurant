@@ -1,6 +1,6 @@
 .thank-you {
 	&__wrapper {
-		@include adaptiveValue('padding-top', 150, 50, 0, 1110, 768);
+		@include adaptiveValue('padding-top', 200, 120, 0, 1110, 768);
 		@include adaptiveValue('padding-bottom', 150, 50, 0, 1110, 768);
 	}
 	&__container {
