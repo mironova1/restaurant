@@ -3,7 +3,7 @@ import {isMobile} from './functions.js';
 // Підключення списку активних модулів
 import {flsModules} from './modules.js';
 // Підключення маски
-// import Inputmask from 'inputmask';
+import IMask from 'imask';
 
 function addActiveClass() {
 	let menuItems = document.getElementsByClassName('menu__link');
@@ -19,3 +19,23 @@ function addActiveClass() {
 	}
 }
 addActiveClass();
+
+function showMaskInForm() {
+	const element = document.getElementById('phone');
+	let maskOptions = {
+		mask: '+{38}(000)000-00-00',
+		lazy: true,
+	};
+	let mask = new IMask(element, maskOptions);
+}
+showMaskInForm();
+
+function showMaskInPopup() {
+	const element = document.getElementById('phone_number');
+	let maskOptions = {
+		mask: '+{38}(000)000-00-00',
+		lazy: true,
+	};
+	let mask = new IMask(element, maskOptions);
+}
+showMaskInPopup();

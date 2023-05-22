@@ -12,7 +12,7 @@
 	$mail->IsHTML(true);
 
 	$name = $_POST['name'];
-	$phone = $_POST['phone_number'];
+	$phone = $_POST['phone'];
 	// $email = $_POST['form[email]'];
 	$email = $_POST['email'];
 	$text_message = $_POST['message'];
@@ -27,9 +27,9 @@
 	*/
 
 	//Від кого лист
-	$mail->setFrom('intensivesc@gmail.com', 'Бакинський дворик'); // Вказати потрібний E-mail
+	$mail->setFrom('tbackup771@gmail.com', 'Бакинський дворик'); // Вказати потрібний E-mail
 	//Кому відправити
-	$mail->addAddress('tbackup771@gmail.com'); // Вказати потрібний E-mail
+	$mail->addAddress('intensivesc@gmail.com'); // Вказати потрібний E-mail
 	//Тема листа
 	$mail->Subject = 'Вітання! Нова заявка';
 
