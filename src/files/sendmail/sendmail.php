@@ -29,12 +29,12 @@
 	//Від кого лист
 	$mail->setFrom('tbackup771@gmail.com', 'Бакинський дворик'); // Вказати потрібний E-mail
 	//Кому відправити
-	$mail->addAddress('intensivesc@gmail.com'); // Вказати потрібний E-mail
+	$mail->addAddress('mironovaanastasia2001@gmail.com'); // Вказати потрібний E-mail
 	//Тема листа
 	$mail->Subject = 'Вітання! Нова заявка';
 
 	//Тіло листа
-	$body = '<h1>Зустрічайте супер листа!</h1> <br> <span>Ім\'я: </span>' .$name. '<br> Телефон:' .$phone. '<br> Пошта:' .$email. '<br> Повідомлення: ' .$text_message;
+	$body = '<h1>Зустрічайте листа!</h1> <br> <span>Ім\'я: </span>' .$name. '<br> Телефон:' .$phone. '<br> Пошта:' .$email. '<br> Повідомлення: ' .$text_message;
 	// <br> Ім\'я: ' .$name. '<br> Телефон: ' .$phone. '<br>' Пошта: ' .$email. '<br> Моє повідомлення: ' .$text_message';
 	
 
